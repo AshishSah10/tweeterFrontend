@@ -19,7 +19,10 @@ class ForgotPasswordComponent extends Component {
       if (res.data === "Success") {
         this.props.history.push("/login");
       } else message.error("Username does not exist ! Please register");
-    });
+    }).catch(error => {
+      message.error("Username does not exist ! Please register");
+      this.props.history.push("/403ErrorPage");
+    })
   }
 
   emailHandler = (event) => {

@@ -11,6 +11,7 @@ class FooterComponent extends Component {
     return (
       <div>
         <footer className="footer"></footer>
+        <h1>footer</h1>
       </div>
     );
   }

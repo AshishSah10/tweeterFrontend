@@ -25,7 +25,7 @@ class HeaderComponent extends Component {
     userservice.logout().then((res) => {
       console.log(res.data);
       if (res.data === "Success") {
-        localStorage.removeItem("login", "");
+        localStorage.removeItem("loginId", "");
         localStorage.removeItem("AuthToken", "");
         
         this.props.history.push("/login");

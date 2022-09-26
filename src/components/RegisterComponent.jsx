@@ -74,7 +74,10 @@ class RegisterComponent extends Component {
           localStorage.setItem("loginId", this.state.email);
           this.props.history.push("/login");
         } else message.error("Username does not exist ! Please register");
-      });
+      }).catch(error => {
+        message.error("Account already exits with this LoginId or Email  ! Please register again");
+        this.props.history.push("/register");
+      })
     }
   }
 

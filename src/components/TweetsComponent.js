@@ -1,3 +1,4 @@
+import { message } from "antd";
 import React, { Component } from "react";
 import tweetservice from "../services/tweetservice";
 import HeaderComponent from "./HeaderComponent";
@@ -110,7 +111,10 @@ class TweetsComponent extends Component {
           })
       }
       this.setState({ replies: allTweetsReplies });
-    });
+    }).catch(error => {
+      message.error("Please login to your accout");
+      this.props.history.push("/403ErrorPage")
+    })
   }
 
   render() {

@@ -29,7 +29,12 @@ function App() {
               exact
               component={ForgotPasswordComponent}
             ></Route>
+               <Route exact path="/403ErrorPage" render={() => {window.location.href="/403html.html"}} />
+               <Route exact path="/404ErrorPage" render={() => {window.location.href="/404html.html"}} />
+              
+               <Route path="/" render={() => {window.location.href="/404html.html"}} />
           </Switch>
+      
         </div>
       </Router>
     </div>

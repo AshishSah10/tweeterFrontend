@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:8081/api/v1.0/tweets/";
 
-
+//const BASE_URL = "http://tweeter.us-east-1.elasticbeanstalk.com/api/v1.0/tweets/";
 const headers = {
   "Content-Type": "application/json",
   "Accept": "*/*",

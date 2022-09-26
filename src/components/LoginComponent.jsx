@@ -30,8 +30,16 @@ class LoginComponent extends Component {
         localStorage.setItem("loginId", this.state.loginId);
         localStorage.setItem("AuthToken", res.headers['authtoken']);
         this.props.history.push("/allTweets");
-      } else message.error("invalid username or password ! Please Retry.");
-    });
+      } else{
+        message.error("invalid username or password ! Please Retry.");
+        this.props.history.push("/403ErrorPage");
+      } 
+    })
+    .catch(error => {
+      message.error("invalid username or password ! Please Retry.");
+      
+      this.props.history.push("/403ErrorPage");
+    })
   }
 
   loginIdHandler = (event) => {

@@ -4,6 +4,11 @@ const GET_ALL_USERS_TWEET_API_URL =
      "http://localhost:8081/api/v1.0/tweets/all";
 const BASE_URL = "http://localhost:8081/api/v1.0/tweets/";
 
+//const GET_ALL_USERS_TWEET_API_URL =
+  //   "http://tweeter.us-east-1.elasticbeanstalk.com/api/v1.0/tweets/all";
+
+//const BASE_URL = "http://tweeter.us-east-1.elasticbeanstalk.com/api/v1.0/tweets/";
+
 const headers = { 
   "Authorization": 'Bearer ' + localStorage.getItem('AuthToken'),
   "Access-Control-Allow-Origin": "*",
